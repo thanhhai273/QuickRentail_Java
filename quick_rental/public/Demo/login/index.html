@@ -1,0 +1,96 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="utf-8">
+		<title>Register</title>
+		<meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+		<!-- Icon -->
+		<link rel="stylesheet" href="fonts/linearicons/style.css">
+		
+		<!-- Style css -->
+		<link rel="stylesheet" href="css/bootstrap.min.css">
+		<link rel="stylesheet" href="css/style.css">
+		
+	</head>
+
+	<body>
+		<div class="wrapper">
+			<div class="inner">
+				<div class="img"><img src="images/santa2.png" alt="" class="image-1"></div>
+				<img src="images/santa_1.png" alt="" class="image-3">
+				<!-- Form submit -->
+				<form id="form-register">
+					<h3>Register</h3>
+					<!-- Input tên -->
+					<div class="form-holder">
+						<span class="lnr lnr-user"></span>
+						<input type="text" class="form-control" placeholder="Username" id="name">
+						<!-- Xác thực -->
+						<div id="invalid00" class="invalid-feedback">
+							This field is required!
+						</div>
+					</div>
+					<!-- Input số điện thoại -->
+					<div class="form-holder">
+						<span class="lnr lnr-phone-handset"></span>
+						<input type="text" class="form-control" placeholder="Phone Number" id="phone">
+						<!-- Xác thực -->
+						<div id="invalid01" class="invalid-feedback">
+							This field is required!
+						</div>
+						<div id="invalid11" class="invalid-feedback">
+							Invalid phone number, please enter 9 full numbers!
+						</div>
+					</div>
+					<!-- Input địa chỉ email -->
+					<div class="form-holder">
+						<span class="lnr lnr-envelope"></span>
+						<input type="text" class="form-control" placeholder="Mail" id="email">
+						<!-- Xác thực -->
+						<div id="invalid02" class="invalid-feedback">
+							This field is required!
+						</div>
+						<div id="invalid12" class="invalid-feedback">
+							Invalid email! Ex: email@example.com.
+						</div>
+					</div>
+					<!-- input mật khẩu -->
+					<div class="form-holder">
+						<span class="lnr lnr-lock"></span>
+						<input type="password" class="form-control" placeholder="Password" id="pass">
+						<!-- Xác thực -->
+						<div id="invalid03" class="invalid-feedback">
+							This field is required!
+						</div>
+						<div id="invalid13" class="invalid-feedback">
+							Should contain at least one digit, upper case and 8 from the mentioned characters!
+						</div>
+					</div>
+					<!-- Input xác nhận mật khẩu -->
+					<div class="form-holder">
+						<span class="lnr lnr-lock"></span>
+						<input type="password" class="form-control" placeholder="Confirm Password" id="confirm-pass">
+						<!-- Xác thực -->
+						<div id="invalid04" class="invalid-feedback">
+							This field is required!
+						</div>
+						<div id="invalid14" class="invalid-feedback">
+							Invalid confirm password, please enter again!
+						</div>
+					</div>
+					<!-- Nút submit -->
+					<button id="submit-button">
+						<span>Submit</span>
+					</button>
+				</form>
+				<!-- End form -->
+				<img src="images/gift.png" alt="" class="image-2">
+			</div>
+		</div>
+		
+		<!-- Script -->
+		<script src="js/jquery-3.3.1.min.js"></script>
+		<script src="js/main.js"></script>
+	</body>
+</html>

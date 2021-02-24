@@ -1,0 +1,10 @@
+Luồng chung:
+1. Khách hàng đăng nhập => Check CSDL: "customer"
+2. Khách hàng đăng ký => Insert CSDL: "customer"
+3. Khách hàng tìm sản phẩm -> Khách hàng chọn xem chi tiết sản phẩm -> Cho vào giỏ hàng -> Cập nhật giỏ hàng : CSDL "category", "product", "cart"
+   + Phát sinh: cập nhật lại số lượng đang cho thuê: "warehouse"
+4. Khách hàng đặt hàng(thuê) => Thêm CSDL: "processing_bill" - Xóa "Cart", trong quá trình thuê cho phép cập nhật status của "processing_bill"
+5. Khách đã trả hàng thành công => Thêm CSDL: "succes_bill" - Xóa "processing_bill"
+   + Phát sinh: cập nhật lại số lượng đang cho thuê: "warehouse".
+6. Khách hàng xem lịch sử đã thuê: "succes_bill"
+7. Cập nhật người dùng

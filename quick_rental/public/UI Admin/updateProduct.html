@@ -1,0 +1,204 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <title>Thay đổi thông tin sản phẩm</title>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.1/css/bootstrap.min.css">
+  <link rel="stylesheet" href="css/updateProduct.css">
+  
+
+</head>
+
+<body>
+
+  <div class="container">
+    <h2>Thay đổi thông tin sản phẩm</h2>
+    <!-- Trigger the modal with a button -->
+    <div data-toggle="modal" data-target="#modalAddProd">Open Modal</div>
+
+    <!-- Modal -->
+    <div class="modal fade" id="modalAddProd" role="dialog">
+      <div class="modal-dialog">
+
+        <!-- Modal content-->
+        <div class="modal-content">
+          <!-- Tiêu đề modal -->
+          <div class="modal-header">
+            <button type="button" class="close" data-dismiss="modal">&times;</button>
+            <h4 class="modal-title">Thay đổi thông tin sản phẩm</h4>
+          </div>
+          <div class="modal-body">
+            <div class="row">
+              <div class="col-xl-8 order-xl-1">
+                <div>
+                  <form id="form-add-prod">
+                    <h6 class="heading-small text-muted mb-4">Thông tin sản phẩm</h6>
+                    <div class="pl-lg-4">
+                      <div class="row">
+                        <!-- Tên sản phẩm -->
+                        <div class="col-lg-6">
+                          <div class="form-group focused">
+                            <label class="form-control-label" for="input-prodname">Tên sản phẩm <span style="color: red;">(*)</span></label>
+                            <input type="text" id="input-prodname" class="form-control form-control-alternative"
+                              value="">
+                          </div>
+                        </div>
+                        <!-- Mã sản phẩm -->
+                        <div class="col-lg-6">
+                          <div class="form-group">
+                            <label class="form-control-label" for="input-prodcode">Mã sản phẩm <span style="color: red;">(*)</span></label>
+                            <input type="text" id="input-prodcode" class="form-control form-control-alternative">
+                          </div>
+                        </div>
+                      </div>
+                      <div class="row">
+                        <!-- Giá thuê sản phẩm -->
+                        <div class="col-lg-6">
+                          <div class="form-group focused">
+                            <label class="form-control-label" for="input-prodprice">Giá thuê <span style="color: red;">(*)</span></label>
+                            <input type="text" id="input-prodprice" class="form-control form-control-alternative"
+                              value="">
+                          </div>
+                        </div>
+                        <!-- Số tiền đặt cọc -->
+                        <div class="col-lg-6">
+                          <div class="form-group focused">
+                            <label class="form-control-label" for="input-deposit">Cọc trước <span style="color: red;">(*)</span></label>
+                            <input type="text" id="input-deposit" class="form-control form-control-alternative"
+                              value="">
+                          </div>
+                        </div>
+                      </div>
+                      <div class="row">
+                        <!-- Chọn danh mục tương ứng với sản phẩm -->
+                        <div class="col-lg-6">
+                          <div class="form-group focused">
+                            <label class="form-control-label" for="input-cate">Danh mục <span style="color: red;">(*)</span></label>
+                            <select class=" form-control form-control-alternative" id="select-cate">
+                              <option value="0">Máy tính</option>
+                              <option value="1">Điện thoại</option>
+                              <option value="2">Phụ kiện</option>
+                            </select>
+                          </div>
+                        </div>
+                        <!-- Số lượng sản phẩm còn trong kho -->
+                        <div class="col-lg-6">
+                          <div class="form-group focused">
+                            <label class="form-control-label" for="input-amount">Số lượng trong kho <span style="color: red;">(*)</span></label>
+                            <input type="text" id="input-amount" class="form-control form-control-alternative"
+                              value="">
+                          </div>
+                        </div>
+                      </div>
+                      <div class="row">
+                        <!-- Màu sắc sản phẩm -->
+                        <div class="col-lg-6">
+                          <div class="form-group focused">
+                            <label class="form-control-label" for="input-color">Màu sắc</label>
+                            <input type="text" id="input-color" class="form-control form-control-alternative"
+                              value="">
+                          </div>
+                        </div>
+                        <!-- Trạng thái sản phẩm -->
+                        <div class="col-lg-6">
+                          <div class="form-group focused">
+                            <label class="form-control-label" for="input-status">Trạng thái <span style="color: red;">(*)</span></label>
+                            <select class=" form-control form-control-alternative" id="select-status">
+                              <option value="HOT">HOT</option>
+                              <option value="SALE">SALE</option>
+                              <option value="TREND">TREND</option>
+                            </select>
+                          </div>
+                        </div>
+                      </div>
+                    </div>
+                    
+                    <hr class="my-4">
+
+                    <h6 class="heading-small text-muted mb-4">Hình ảnh</h6>
+                    <div class="pl-lg-5">
+                      <div class="row">
+                        <!-- Ảnh 1 -->
+                        <div class="col-lg-4">
+                          <div class="form-group focused"
+                            style="display: flex; align-items: center; justify-content: center;">
+
+                            <input type='file' onchange="readURL1(this);" id="selectedFile1" style="display: none;"
+                              class="btn-upd" />
+                            <input type="button" value="Browse..."
+                              onclick="document.getElementById('selectedFile1').click();" />
+                          </div>
+                          <img id="blah1" src="https://www.pngmart.com/files/5/Snow-Transparent-PNG.png"
+                            alt="your image 1" />
+                          <br><br>
+                          <label class="form-control-label" for="input-img1"
+                            style="display: flex; align-items: center; justify-content: center;">Ảnh 1 (hiển
+                            thị) <span style="color: red; margin-left: 2px;">(*)</span></label>
+                        </div>
+                        <!-- Ảnh 2 -->
+                        <div class="col-lg-4">
+                          <div class="form-group focused"
+                            style="display: flex; align-items: center; justify-content: center;">
+                            <input type='file' onchange="readURL2(this);" id="selectedFile2" style="display: none;"
+                              class="btn-upd" />
+                            <input type="button" value="Browse..."
+                              onclick="document.getElementById('selectedFile2').click();" />
+                          </div>
+                          <img id="blah2" src="https://www.pngmart.com/files/5/Snow-Transparent-PNG.png"
+                            alt="your image 2" />
+                          <br><br>
+                          <label class="form-control-label" for="input-img2"
+                            style="display: flex; align-items: center; justify-content: center;">Ảnh 2 <span style="color: red; margin-left: 2px;">(*)</span></label>
+                        </div>
+                        <!-- Ảnh 3 -->
+                        <div class="col-lg-4">
+                          <div class="form-group focused"
+                            style="display: flex; align-items: center; justify-content: center;">
+                            <input type='file' onchange="readURL3(this);" id="selectedFile3" style="display: none;"
+                              class="btn-upd" />
+                            <input type="button" value="Browse..."
+                              onclick="document.getElementById('selectedFile3').click();" />
+                          </div>
+                          <img id="blah3" src="https://www.pngmart.com/files/5/Snow-Transparent-PNG.png"
+                            alt="your image 3" />
+                          <br><br>
+                          <label class="form-control-label" for="input-img3"
+                            style="display: flex; align-items: center; justify-content: center;">Ảnh 3 <span style="color: red; margin-left: 2px;">(*)</span></label>
+                        </div>
+                      </div>
+                    </div>
+                    <hr class="my-4">
+                    <!-- Mô tả -->
+                    <div class="pl-lg-4">
+                      <div class="form-group focused">
+                        <label class="form-control-label">Mô tả sản phẩm</label>
+                        <textarea rows="4" class="form-control form-control-alternative" id="input-des"></textarea>
+                      </div>
+                    </div>
+                  </form>
+                </div>
+
+              </div>
+            </div>
+          </div>
+          <div id="invalid" class="invalid-feedback"  style="display: none;">
+            Vui lòng nhập đầy đủ các thông tin (*)!
+          </div>
+          <!-- Thêm mới -->
+          <div class="modal-footer">
+            <button type="button" class="btn btn-default" id="add-button">Thêm mới</button>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+  <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.1/js/bootstrap.min.js"></script>
+  <script src="js/previewImage.js"></script>
+  <script src="js/modal-prod.js"></script>
+</body>
+
+</html>

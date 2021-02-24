@@ -1,0 +1,20 @@
+.modal-header{
+    height: 35px;
+    padding: 2px 2px;
+    text-align: center;
+    text-indent: 200px;
+}
+.modal-title{
+    font-size: 20px;
+}
+.modal-footer{
+    height: 45px;
+    padding: 0.5px 2px;
+}
+
+
+/* Css dùng chung cho button */
+.button-common{
+    padding: 5px 30px 5px 30px;
+    margin-bottom: 5px;
+}

@@ -1,0 +1,4 @@
+customer_id,custome_code,first_name,last_name,address,birthday,gender,phone_number,email,bank_id,bank_code_account,password
+799ab8b3-3e43-11eb-b88c-6045cb24a6d7,1,ha,van,as,1998-01-01,1,012432452,abc@abc,1,1123,1234
+799aef47-3e43-11eb-b88c-6045cb24a6d7,2,huong,le,as,1998-01-01,1,012432452,xyz@abc,1,1123,1234
+799b002c-3e43-11eb-b88c-6045cb24a6d7,3,hung,nguyen,as,1998-01-01,1,012432452,uvz@abc,1,1123,1234
